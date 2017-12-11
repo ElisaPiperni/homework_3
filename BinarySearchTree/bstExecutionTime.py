@@ -85,26 +85,12 @@ for x in size:
 
 #plot
 
-def logarithm(lst):
-    exp_values = []
-    for x in lst:
-        exp = (2 * (math.log2(x))) * 10 ** (-6.4)
-        exp_values.append(exp)
-    return exp_values
-
-xdata = list(insDict.keys())
-yexp=logarithm(xdata)
-
 plt.figure(1)
 plt.scatter(list(insDict.keys()), list(insDict.values()), color='b')
-plt.plot(list(insDict.keys()), list(insDict.values()), color='b', label = 'real')
-
-plt.plot(xdata, yexp, color='r', label='expected')
-
+plt.plot(list(insDict.keys()), list(insDict.values()), color='b')
 plt.title('insertion execution time')
 plt.ylabel('time')
 plt.xlabel('index')
-plt.legend()
 plt.grid(True)
 plt.ylim(min(insDict.values()), max(insDict.values()))
 
