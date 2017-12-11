@@ -4,7 +4,7 @@ from collections import OrderedDict
 import matplotlib.pyplot as plt
 
 
-l =[10, 100, 1000]
+l =[10, 100, 1000, 10000]
 dquick= OrderedDict()
 dmerge= OrderedDict()
 
